@@ -2,7 +2,7 @@
 name: Bug Report
 about: Create a template to quickly and easily report bugs you find/run into
 title: "[BUG] <<REPORT_NAME>>"
-labels: ''
+labels: Pending
 assignees: ''
 
 ---
