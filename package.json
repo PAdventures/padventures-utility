@@ -1,0 +1,24 @@
+{
+    "name": "padventures-utility",
+    "version": "0.0.1",
+    "description": "Small and reliable utility functions by @padventures",
+    "main": "./dist/index.js",
+    "module": "./dist/index.mjs",
+    "types": "./dist/index.d.ts",
+    "scripts": {
+        "build": "tsup"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/PAdventures/padventures-utility.git"
+    },
+    "keywords": [
+        "utility"
+    ],
+    "author": "padventures",
+    "license": "MIT",
+    "devDependencies": {
+        "tsup": "^8.0.2",
+        "typescript": "^5.4.5"
+    }
+}
