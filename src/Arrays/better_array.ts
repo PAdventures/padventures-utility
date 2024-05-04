@@ -7,7 +7,7 @@ export default class BetterArray<T> extends Array {
      * @param input The array-like object
      * @returns BetterArray of type T
      */
-    static from<T>(input: T[]): BetterArray<T> {
+    static from<T>(input: T[] | BetterArray<T>): BetterArray<T> {
         return new BetterArray(input)
     }
     
