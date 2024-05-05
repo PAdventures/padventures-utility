@@ -1,7 +1,6 @@
 import { ReadOnlyArray } from "./readonly_array.js"
 
 export default class BetterArray<T> extends Array {
-    //FIXME - BetterArray.from() does not attach the type to the new array if a BetterArray was given
     /**
      * Creates an array from an array-like object. Creates an array from an iterable object.
      * @param input The array-like object
