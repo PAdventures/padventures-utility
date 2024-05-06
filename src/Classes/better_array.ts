@@ -1,4 +1,4 @@
-import { ReadOnlyArray } from "./readonly_array.js"
+import { ReadOnlyArray } from "../types.js"
 
 export default class BetterArray<T> extends Array {
     /**

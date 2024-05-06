@@ -1,5 +1,4 @@
-import BetterArray from "./Arrays/better_array.js";
-export { type ReadOnlyArray } from "./Arrays/readonly_array.js";
+import BetterArray from "./Classes/better_array.js";
 
 export {
     BetterArray
