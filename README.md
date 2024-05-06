@@ -9,8 +9,9 @@
 
 - [x] Better Arrays
 - [x] Read-only Arrays (Tuples)
+- [ ] Priority Queues
 
 More will be added later, I promise
 
 ### In Progress
-- Nothing right now :(
+- Priority Queues
