@@ -1,7 +1,7 @@
 {
   "name": "padventures-utility",
   "version": "0.0.1",
-  "description": "Small and reliable utility functions by @padventures",
+  "description": "Reliable utility functions and other things",
   "main": "./dist/index.js",
   "module": "./dist/ems.mjs",
   "types": "./dist/index.d.ts",
