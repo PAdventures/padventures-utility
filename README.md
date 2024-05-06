@@ -7,10 +7,10 @@
 
 ## Roadmap
 
-- [ ] Better Arrays
-- [ ] Read-only Arrays (Tuples)
+- [x] Better Arrays
+- [x] Read-only Arrays (Tuples)
 
 More will be added later, I promise
 
 ### In Progress
-- Better Arrays
+- Nothing right now :(
