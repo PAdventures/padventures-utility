@@ -1,4 +1,4 @@
-import BetterArray from "./Classes/better_array.js";
+import BetterArray from "./Classes/BetterArray.js";
 
 export {
     BetterArray
