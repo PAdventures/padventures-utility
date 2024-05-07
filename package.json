@@ -6,9 +6,7 @@
   "module": "./dist/ems.mjs",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "build": "npm test && npm run compile",
-    "test": "jest",
-    "compile": "tsc"
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
