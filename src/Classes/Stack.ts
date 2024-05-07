@@ -28,7 +28,7 @@ export default class Stack<T> {
         if (this.isEmpty()) {
             throw new Error("Stack has reached minimum capacity; stack underflow")
         }
-        return this.storage.pop()
+        return this.storage.pop()!
     }
 
     /**
