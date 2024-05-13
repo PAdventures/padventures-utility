@@ -6,7 +6,7 @@ export default class BetterArray<T> extends Array {
      * @param input The array-like object
      * @returns BetterArray of type T
      */
-    static from<T>(input: T[] | BetterArray<T>): BetterArray<T> {
+    static override from<T>(input: T[] | BetterArray<T>): BetterArray<T> {
         return new BetterArray(input)
     }
     
@@ -25,7 +25,7 @@ export default class BetterArray<T> extends Array {
      * Checks if the array is empty
      * @returns boolean
      */
-    isEmpty(): boolean {
+    public isEmpty(): boolean {
         return this.length === 0
     }
 
@@ -36,7 +36,7 @@ export default class BetterArray<T> extends Array {
      * @param items The items to insert in the array
      * @returns Length of new array or undefined
      */
-    insert(index: number, ...items: T[]): number | undefined {
+    public insert(index: number, ...items: T[]): number | undefined {
         if (index < 0) {
             return undefined
         }
@@ -50,7 +50,7 @@ export default class BetterArray<T> extends Array {
      * @param index Zero-based location of the item to remove
      * @returns Type T or undefined
      */
-    pop(index?: number): T | undefined {
+    public override pop(index?: number): T | undefined {
         if (index !== 0 && !index) {
             return super.pop()
         }
@@ -65,7 +65,7 @@ export default class BetterArray<T> extends Array {
      * @param count The number of values to get
      * @returns An array containing the values or undefined
      */
-    first(count: number = 1): T[] | undefined {
+    public first(count: number = 1): T[] | undefined {
         if (this.isEmpty()) {
             return undefined
         }
@@ -80,7 +80,7 @@ export default class BetterArray<T> extends Array {
      * @param count The number of values to get
      * @returns An array containing the values or undefined
      */
-    last(count: number = 1): T[] | undefined {
+    public last(count: number = 1): T[] | undefined {
         if (this.isEmpty()) {
             return undefined
         }
@@ -91,10 +91,10 @@ export default class BetterArray<T> extends Array {
     }
 
     /**
-     * Turns the array into a read-only array
-     * @returns A read-only array
+     * Returns a Read only array
+     * @returns A read-only array of type T
      */
-    toReadOnly(): ReadOnlyArray<T> {
+    public toReadOnly(): ReadOnlyArray<T> {
         return this as ReadOnlyArray<T>
     }
 }

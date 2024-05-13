@@ -12,7 +12,7 @@ export default class Stack<T> {
      * @param item The item to push onto the stack
      * @throws Error thrown if the stack is full
      */
-    push(item: T): void {
+    public push(item: T): void {
         if (this.isFull()) {
             throw new Error("Stack has reached maximum capacity; stack overflow")
         }
@@ -24,7 +24,7 @@ export default class Stack<T> {
      * @returns The item of type T
      * @throws Error thrown if the stack is empty
      */
-    pop(): T {
+    public pop(): T {
         if (this.isEmpty()) {
             throw new Error("Stack has reached minimum capacity; stack underflow")
         }
@@ -35,7 +35,7 @@ export default class Stack<T> {
      * Returns the item at the top of the stack, and stack is not modified
      * @returns The item at the top of the stack of type T, or null if the stack is empty
      */
-    peek(): T | null {
+    public peek(): T | null {
         if (this.isEmpty()) {
             return null
         }
@@ -46,7 +46,7 @@ export default class Stack<T> {
      * Checks if the stack is empty
      * @returns boolean
      */
-    isEmpty(): boolean {
+    public isEmpty(): boolean {
         return this.size() === 0
     }
 
@@ -54,7 +54,7 @@ export default class Stack<T> {
      * Checks if the stack has reached maximum capacity
      * @returns boolean
      */
-    isFull(): boolean {
+    public isFull(): boolean {
         return this.size() === this.capacity
     }
 
@@ -62,7 +62,7 @@ export default class Stack<T> {
      * Gives the number of items stored in the stack
      * @returns The number of items
      */
-    size(): number {
+    public size(): number {
         return this.storage.length
     }
 
@@ -70,14 +70,14 @@ export default class Stack<T> {
      * Coverts the stack into an array
      * @returns Array of type T
      */
-    toArray(): Array<T> {
+    public toArray(): Array<T> {
         return this.storage;
     }
 
     /**
      * Removes all items in the stack
      */
-    flush(): void {
+    public flush(): void {
         this.storage = []
     }
 }
