@@ -95,6 +95,6 @@ export default class BetterArray<T> extends Array {
      * @returns A read-only array
      */
     toReadOnly(): ReadOnlyArray<T> {
-        return this
+        return this as ReadOnlyArray<T>
     }
 }
