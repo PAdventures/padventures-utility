@@ -10,6 +10,7 @@ export default class Queue<T> {
     /**
      * Adds an item to the back of the queue
      * @param item The item to add to the queue
+     * @returns {void} Nothing is returned
      * @throws Error thrown if the queue is full
      */
     public enQueue(item: T): void {
@@ -21,7 +22,7 @@ export default class Queue<T> {
 
     /**
      * Removes the item at the front of the queue, and returns it
-     * @returns The item, or, if the queue is empty, undefined is returned
+     * @returns {T | undefined} The item, or, if the queue is empty, undefined is returned
      */
     public deQueue(): T | undefined {
         return this.storage.shift()
@@ -29,7 +30,7 @@ export default class Queue<T> {
 
     /**
  * Checks if the queue is empty
- * @returns boolean
+ * @returns {boolean} Returns `true` if the queue is empty and `false` if it's not
  */
     public isEmpty(): boolean {
         return this.size() === 0
@@ -37,7 +38,7 @@ export default class Queue<T> {
 
     /**
      * Checks if the queue has reached maximum capacity
-     * @returns boolean
+     * @returns {boolean} Returns `true` if the queue is full and `false` if it's not
      */
     public isFull(): boolean {
         return this.size() === this.capacity
@@ -45,7 +46,7 @@ export default class Queue<T> {
 
     /**
      * Gives the number of items stored in the queue
-     * @returns The number of items
+     * @returns {number} The number of items
      */
     public size(): number {
         return this.storage.length
@@ -53,7 +54,7 @@ export default class Queue<T> {
 
     /**
      * Coverts the queue into an array
-     * @returns Array of type T
+     * @returns {Array<T>} Array of type T
      */
     public toArray(): Array<T> {
         return this.storage;
@@ -61,6 +62,7 @@ export default class Queue<T> {
 
     /**
      * Removes all items in the queue
+     * @returns {void} Nothing is returned
      */
     public flush(): void {
         this.storage = []
