@@ -10,9 +10,10 @@ export default class Queue<T> {
     /**
      * Adds an item to the back of the queue
      * @param item The item to add to the queue
+     * @returns {void} Nothing is returned
      * @throws Error thrown if the queue is full
      */
-    enQueue(item: T): void {
+    public enQueue(item: T): void {
         if (this.isFull()) {
             throw new Error("Queue has reached maximum capacity; queue overflow")
         }
@@ -21,48 +22,49 @@ export default class Queue<T> {
 
     /**
      * Removes the item at the front of the queue, and returns it
-     * @returns The item, or, if the queue is empty, undefined is returned
+     * @returns {T | undefined} The item, or, if the queue is empty, undefined is returned
      */
-    deQueue(): T | undefined {
+    public deQueue(): T | undefined {
         return this.storage.shift()
     }
 
     /**
  * Checks if the queue is empty
- * @returns boolean
+ * @returns {boolean} Returns `true` if the queue is empty and `false` if it's not
  */
-    isEmpty(): boolean {
+    public isEmpty(): boolean {
         return this.size() === 0
     }
 
     /**
      * Checks if the queue has reached maximum capacity
-     * @returns boolean
+     * @returns {boolean} Returns `true` if the queue is full and `false` if it's not
      */
-    isFull(): boolean {
+    public isFull(): boolean {
         return this.size() === this.capacity
     }
 
     /**
      * Gives the number of items stored in the queue
-     * @returns The number of items
+     * @returns {number} The number of items
      */
-    size(): number {
+    public size(): number {
         return this.storage.length
     }
 
     /**
      * Coverts the queue into an array
-     * @returns Array of type T
+     * @returns {Array<T>} Array of type T
      */
-    toArray(): Array<T> {
+    public toArray(): Array<T> {
         return this.storage;
     }
 
     /**
      * Removes all items in the queue
+     * @returns {void} Nothing is returned
      */
-    flush(): void {
+    public flush(): void {
         this.storage = []
     }    
 }

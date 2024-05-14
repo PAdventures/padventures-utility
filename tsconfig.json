@@ -3,7 +3,16 @@
 		"declaration": true,
 		"outDir": "./dist",
         "rootDir": "./src",
-        "allowJs": true
+        "allowJs": true,
+        "target": "ESNext",
+        "module": "NodeNext",
+        "moduleResolution": "NodeNext",
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        "allowSyntheticDefaultImports": true,
+        "strict": true,
+        "declarationDir": "./dist/types",
+        "noImplicitOverride": true
 	},
     "include": ["./src/**/*"],
     "exclude": ["node_modules"]
