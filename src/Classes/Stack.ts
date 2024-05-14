@@ -10,6 +10,7 @@ export default class Stack<T> {
     /**
      * Adds an item to the top of the stack
      * @param item The item to push onto the stack
+     * @returns {void} Nothing is returned
      * @throws Error thrown if the stack is full
      */
     public push(item: T): void {
@@ -21,7 +22,7 @@ export default class Stack<T> {
 
     /**
      * Removes the item at the top of the stack
-     * @returns The item of type T
+     * @returns {T} The item of type T
      * @throws Error thrown if the stack is empty
      */
     public pop(): T {
@@ -33,7 +34,7 @@ export default class Stack<T> {
 
     /**
      * Returns the item at the top of the stack, and stack is not modified
-     * @returns The item at the top of the stack of type T, or null if the stack is empty
+     * @returns {T | null} The item at the top of the stack of type T, or null if the stack is empty
      */
     public peek(): T | null {
         if (this.isEmpty()) {
@@ -44,7 +45,7 @@ export default class Stack<T> {
 
     /**
      * Checks if the stack is empty
-     * @returns boolean
+     * @returns {boolean} Returns `true` if the stack is empty and `false` if it's not
      */
     public isEmpty(): boolean {
         return this.size() === 0
@@ -52,7 +53,7 @@ export default class Stack<T> {
 
     /**
      * Checks if the stack has reached maximum capacity
-     * @returns boolean
+     * @returns {boolean} Returns `true` if the stack is full and `false` if it's not
      */
     public isFull(): boolean {
         return this.size() === this.capacity
@@ -60,7 +61,7 @@ export default class Stack<T> {
 
     /**
      * Gives the number of items stored in the stack
-     * @returns The number of items
+     * @returns {number} The number of items
      */
     public size(): number {
         return this.storage.length
@@ -68,7 +69,7 @@ export default class Stack<T> {
 
     /**
      * Coverts the stack into an array
-     * @returns Array of type T
+     * @returns {Array<T>} Array of type T
      */
     public toArray(): Array<T> {
         return this.storage;
@@ -76,6 +77,7 @@ export default class Stack<T> {
 
     /**
      * Removes all items in the stack
+     * @returns {void} Nothing is returned
      */
     public flush(): void {
         this.storage = []
