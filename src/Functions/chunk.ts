@@ -11,7 +11,7 @@
 export default function chunk<T>(array: T[], size: number): T[][] {
     const chunked: T[][] = [];
 
-    if (size === 1 || array.length < 2) {
+    if (size === 1 || array.length <= size) {
         return [];
     }
 
